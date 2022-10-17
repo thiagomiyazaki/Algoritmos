@@ -35,20 +35,17 @@ node_t *create_new_node(int value){
 }
 
 int main(){
-    node_t *n1, n2, n3;
+    node_t *tmp;
     node_t *head;
 
-    n1 = (node_t *) malloc(sizeof(node_t));
-    n1->value = 45;
-    n2.value = 8;
-    n3.value = 32;
-
-
-    // vamos linkar os nodes
-    head = n1;
-    n3.next = NULL;
-    n2.next = &n3;
-    n1->next = &n2;
+    tmp = create_new_node(32);
+    head = tmp;
+    tmp = create_new_node(8);
+    tmp->next = head;
+    head = tmp;
+    tmp = create_new_node(34);
+    tmp->next = head;
+    head = tmp;
 
     printlist(head);
 
